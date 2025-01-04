@@ -1,0 +1,10 @@
+body {
+background-color:thistle;
+margin: 0; /* Entfernt Standard-Abstände des Browsers */
+  padding: 0; /* Entfernt Standard-Innenabstände */
+  height: 100%; /* Sorgt dafür, dass die Seite mindestens so groß wie das Fenster ist */
+  overflow: auto; /* Aktiviert das Scrollen, wenn der Inhalt größer ist als das Fenster */
+  width: 100%; /* Sorgt dafür, dass die Seite mindestens so breit wie das Fenster ist */
+}
+
+
