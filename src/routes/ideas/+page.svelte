@@ -39,6 +39,7 @@
     border: 1px solid #ccc;
     background-color: #f9f9f9;
     border-radius: 8px;
+    overflow: hidden;
   }
  
   .befehle {
