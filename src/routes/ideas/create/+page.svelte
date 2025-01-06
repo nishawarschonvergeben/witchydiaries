@@ -7,7 +7,6 @@
   <h1>New Idea:</h1>
 
   <form method="POST" action="?/create" class="compose-form">
-    <!-- Datum -->
     <label for="title">TITEL</label>
     <input
       type="title"
@@ -15,27 +14,34 @@
       name="title"
       class="form-control"
       maxlength="25"
-      required/>
-
-    <!-- Gefühle -->
+      required
+    />
+    <div class="col-12">
     <label for="feels">TAG</label>
     <input type="text" id="tag" name="tag" class="form-control" />
+  </div>
 
+  <div class="col-12">
     <label for="content">chapter</label>
     <textarea id="chapter" name="chapter" class="form-control" required
     ></textarea>
-
+  </div>
+    <div class="col-12">
     <label for="content">setting</label>
     <textarea id="setting" name="setting" class="form-control" rows="4" required
     ></textarea>
-
+  </div>
+    <div class="col-12">
     <label for="content">plot</label>
     <textarea id="plot" name="plot" class="form-control" rows="4" required
     ></textarea>
-
+  </div>
+    <div class="col-12">
     <label for="content">conflict</label>
     <textarea id="conflict" name="conflict" class="form-control" required
     ></textarea>
+  </div>
+    <div class="col-12">
     <label for="content">character growth</label>
     <textarea
       id="character_growth"
@@ -43,21 +49,19 @@
       class="form-control"
       required
     ></textarea>
+  </div>
 
-    <!-- Aktionen -->
     <div class="actions">
       <button type="submit" class="btn btn-primary">Save Entry</button>
     </div>
   </form>
-
+</div>
   {#if form?.success}
     <p class="success-message">New Idea created successfully!</p>
   {/if}
-</div>
 
 <style>
   .idea-compose-page {
-    width: 1000px;
     margin: 10;
     padding: 24px;
     margin-top: 20px;

@@ -20,9 +20,7 @@
 </div>
 
 <style>
-  .container {
-    padding: 20px;
-  }
+
   .entry-card {
     padding: 10px;
     border: 1px solid #ccc;
@@ -37,6 +35,7 @@
     background-color: rgb(218, 137, 218);
     border: 2px dashed #efcfff;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
   .add-entry-link {
     text-decoration: none;

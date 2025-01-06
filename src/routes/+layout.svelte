@@ -20,7 +20,6 @@
   </div>
 </nav>
 
-
   <div class="container">
       {@render children()} 
   </div>

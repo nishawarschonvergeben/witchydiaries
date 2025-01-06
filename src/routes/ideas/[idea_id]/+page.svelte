@@ -11,27 +11,27 @@
   <form class="mt-3" method="POST" action="?/update">
     <input type="hidden" name="_id" value={data.idea._id} /> <!-- hidden input field, damit es ideas erkennt ahhand vo _id -->
     <div class="row">
-      <div class="lg-3">
+      <div class="col-12">
         <label class="form-label" for="tag">TAG</label>
         <input name="tag" bind:value={data.idea.tag} class="form-control" type="text" />
       </div>
-      <div class="lg-3">
+      <div class="col-sm-12 col-md-6 col-lg-6">
         <label class="form-label" for="setting">Setting</label>
         <textarea name="setting" bind:value={data.idea.setting} class="form-control" rows="6"> </textarea>
       </div>
-      <div class="lg-3">
-        <label class="form-label" for="plot">Plot</label>
-     <textarea name="plot" bind:value={data.idea.plot} class="form-control" rows="6"></textarea>
-      </div>
-      <div class="lg-3">
-        <label class="form-label" for="conflict">Conflict</label>
-        <textarea name="conflict" bind:value={data.idea.conflict} class="form-control" rows="4"></textarea>
-      </div>
-      <div class="lg-3">
+      <div class="col-sm-12 col-md-6 col-lg-6">
         <label class="form-label" for="character_growth">Character Development</label>
         <textarea name="character_growth" bind:value={data.idea.character_growth} class="form-control" rows="4"></textarea>
       </div>
-      <div class="lg-3">
+      <div class="col-12">
+        <label class="form-label" for="plot">Plot</label>
+     <textarea name="plot" bind:value={data.idea.plot} class="form-control" rows="6"></textarea>
+      </div>
+      <div class="col-12">
+        <label class="form-label" for="conflict">Conflict</label>
+        <textarea name="conflict" bind:value={data.idea.conflict} class="form-control" rows="4"></textarea>
+      </div>
+      <div class="col-12">
         <button type="submit" class="btn btn-primary">Update</button>
       </div>
     </div>

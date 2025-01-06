@@ -1,5 +1,6 @@
 <script>
   export let data;
+  import { fly } from 'svelte/transition';
 </script>
 
 <div class="entry-card new-entry-box">
@@ -9,7 +10,7 @@
 <div class="container">
   <div class="row gx-3 gy-3">
     {#each data.ideas as idea}
-      <div class="col-sm-12 col-md-4 col-lg-4">
+      <div class="col-sm-12 col-md-12 col-lg-4">
         <div class="entry-card">
           <h2>{idea.title}</h2>
           <p>{idea.chapter}</p>

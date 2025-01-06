@@ -6,30 +6,32 @@
   </script>
 
 <div class="character-detail">
-  <!-- Charakterbild -->
   <img src={character.image} alt="{character.name}" class="character-image" />
 
-  <!-- Charaktername -->
   <div class="character-header">
     <h1>{character.name}</h1>
     <p>{character.role}</p>
-    <p>{character.description}</p>
+    <p><strong>Traits:</strong> {character.traits}</p>
+    <p><strong>Issue:</strong> {character.conflict}</p>
+    <p><strong>Description:</strong> {character.description}</p>
   </div>
 
-
-
-  <!-- Zurück-Link -->
   <a href="/characters" class="back-link">← Zurück zur Übersicht</a>
 </div>
 
+<div class="info-box">
+  <h3>Potential Ideas:</h3>
+  <ul>
+    {#each character.potentialIdeas as idea}
+      <li>{idea.title}: {idea.content}</li>
+    {/each}
+  </ul>
+</div>
 
-
-  
   <style>
     .character-detail {
       display: flex;
       flex-direction: column;
-
       padding: 16px;
     }
   
@@ -44,21 +46,11 @@
       margin-bottom: 16px;
     }
 
-  
     .back-link {
       margin-top: 24px;
       text-decoration: none;
       color: #8B008B;
       font-weight: bold;
+      margin-bottom: 24px;
     }
-
   </style>
-
-<aside class="info-box">
-  <h3>Potential Ideas:</h3>
-  <ul>
-    {#each character.potentialIdeas as idea}
-      <li>{idea.title}: {idea.content}</li>
-    {/each}
-  </ul>
-</aside>

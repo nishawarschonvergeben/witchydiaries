@@ -3,27 +3,20 @@
   export let data;
 </script>
 
-
-<div class = "body" >
-
 <div class="container">
   {#each data.characters as character}
-  <div class="col-sm-6 col-md-4 col-lg-3 mb-2 gx-2">
+  <div class="grid-item">
     <CharaCard {character} />
   </div>
   {/each}
 </div>
 
-</div>
-
-
 <style>
   .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Drei Spalten */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   margin: 20px;
-  
-}
+  }
 </style>
 

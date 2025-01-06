@@ -50,7 +50,6 @@ async function getCharacterByName(name) {
     // Prüfe, ob der Charakter korrekt geladen wurde
     console.log("Gfunde im Server:", character);
 
-    // Konvertiere ObjectId zu String und gib den Charakter zurück (ChatGPT)
     return {
       ...character,
       _id: character._id.toString(),
@@ -62,8 +61,7 @@ async function getCharacterByName(name) {
 }
 
 /////////////////////
-// Für die M:N Beziehung zwischen Charakteren und Ideen (Chat GPT hat geholfen!!! Habe erst zu spät realisiert, dass man das nicht machen muss)
-// Einzelnen Charakter mit verknüpften Ideen abrufen
+// Für die M:N Beziehung zwischen Charakteren und Ideen (ChatGPT hat defo geholfen!)
 async function getCharacterWithIdeas(characterName) {
   const collection = db.collection("characters");
 
@@ -169,7 +167,7 @@ async function createIdea(idea) {
 async function updateIdea(idea) {
   try {
     let id = idea._id;
-    delete idea._id; // delete the _id from the object, because the _id cannot be updated
+    delete idea._id;
     const collection = db.collection("ideas");
     const projection = { character: 0 };
     const query = { _id: new ObjectId(id) }; // filter by id
@@ -306,7 +304,7 @@ async function getChronicles() {
 export default {
   getCharacters,
   getCharacterByName,
-  getCharacterWithIdeas, // Nicht im Unterricht gehabt -hatte hilfe von ChatGPT; nicht benotbar 
+  getCharacterWithIdeas,
   deleteIdea,
   updateIdea,
   createIdea,
