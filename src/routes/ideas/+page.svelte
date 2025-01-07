@@ -1,6 +1,5 @@
 <script>
   export let data;
-  import { fly } from 'svelte/transition';
 </script>
 
 <div class="entry-card new-entry-box">
